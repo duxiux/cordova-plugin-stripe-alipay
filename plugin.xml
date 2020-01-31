@@ -1,18 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-stripe-alipay" version="1.0.3"
+<plugin id="cordova-plugin-stripe-alipay" version="1.0.8"
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>stripeAlipay</name>
-    <js-module name="stripeAlipay" src="www/stripeAlipay.js">
-        <clobbers target="cordova.plugins.stripeAlipay" />
+    <name>StripeAlipay</name>
+    <js-module name="StripeAlipay" src="www/StripeAlipay.js">
+        <clobbers target="StripeAlipay" />
     </js-module>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="stripeAlipay">
-                <param name="android-package" value="cordova-plugin-stripe-alipay.stripeAlipay" />
+            <feature name="StripeAlipay">
+                <!-- value：的值是对应的插件中StripeAlipay.java存放的全路径 -->
+                <param name="android-package" value="com.unreal.world.stripealipay.StripeAlipay" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/stripeAlipay.java" target-dir="src/com/unreal/world/stripeAlipay" />
+        <!-- src:是插件里存放对应.java的路径， target-dir:安装插件时把.java文件存放的【目录】，要和上面的value路径对应 -->
+        <source-file src="src/android/StripeAlipay.java" target-dir="src/com/unreal/world/stripealipay" />
     </platform>
 </plugin>

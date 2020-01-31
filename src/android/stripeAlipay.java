@@ -1,4 +1,4 @@
-package com.unreal.world.stripeAlipay;
+package com.unreal.world.stripealipay;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -10,7 +10,7 @@ import org.json.JSONObject;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class stripeAlipay extends CordovaPlugin {
+public class StripeAlipay extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
