@@ -1,4 +1,4 @@
-package cordova-plugin-stripe-alipay;
+package com.unreal.world.stripeAlipay;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
