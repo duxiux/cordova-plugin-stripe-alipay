@@ -1,0 +1,23 @@
+{
+  "name": "stripealipay",
+  "version": "1.0.1",
+  "description": "Stripe alipay!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realmee/cordova-plugin-stripe-alipay.git"
+  },
+  "keywords": [
+    "stripe",
+    "stripe alipay"
+  ],
+  "author": "realmee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realmee/cordova-plugin-stripe-alipay/issues"
+  },
+  "homepage": "https://github.com/realmee/cordova-plugin-stripe-alipay#readme"
+}
