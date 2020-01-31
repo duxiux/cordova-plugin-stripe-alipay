@@ -1,5 +1,5 @@
 {
-  "name": "stripealipay",
+  "name": "cordova-plugin-stripe-alipay",
   "version": "1.0.1",
   "description": "Stripe alipay!",
   "main": "index.js",
