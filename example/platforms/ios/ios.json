@@ -1,0 +1,32 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-stripe-alipay": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-stripe-alipay.StripeAlipay",
+      "file": "plugins/cordova-plugin-stripe-alipay/www/StripeAlipay.js",
+      "pluginId": "cordova-plugin-stripe-alipay",
+      "clobbers": [
+        "StripeAlipay"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-stripe-alipay": "1.0.9",
+    "cordova-plugin-whitelist": "1.3.4"
+  }
+}

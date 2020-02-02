@@ -9,6 +9,7 @@
     },
     "dependencies": {
         "cordova-android": "^8.1.0",
+        "cordova-ios": "^5.1.1",
         "cordova-plugin-stripe-alipay": "file:..",
         "core-js": "^3.4.4",
         "vue": "^2.6.10"
@@ -47,7 +48,8 @@
             "cordova-plugin-stripe-alipay": {}
         },
         "platforms": [
-            "android"
+            "android",
+            "ios"
         ]
     }
 }
