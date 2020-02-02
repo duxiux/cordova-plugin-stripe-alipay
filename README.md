@@ -38,7 +38,13 @@ window.StripeAlipay.alipayBySourceJson(
 );
 ```
 
-# 3.Warning
+# Alipay on iOS
+
+## 1.config reference
+
+https://stripe.com/docs/sources/alipay/ios
+
+# 3.QA
 
 ## 3.1.Use test key maybe get some error
 

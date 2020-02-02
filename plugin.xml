@@ -21,4 +21,13 @@
         <!-- Add dependencies: app/build.gradle -->
         <framework src="src/android/StripeAlipay.gradle" custom="true" type="gradleReference"/>
     </platform>
+    <platform name="ios">
+        <!-- The feature's name attribute should match what you specify as the JavaScript exec call's service -->
+        <feature name="StripeAlipay">
+            <param name="ios-package" value="CDVStripeAlipay" />
+        </feature>
+        <header-file src="src/ios/CDVStripeAlipay.h" />
+        <source-file src="src/ios/CDVStripeAlipay.m" />
+        <!--<framework src="src/XXX/xx.framework" />-->
+    </platform>
 </plugin>
