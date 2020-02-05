@@ -22,12 +22,20 @@
         <framework src="src/android/StripeAlipay.gradle" custom="true" type="gradleReference"/>
     </platform>
     <platform name="ios">
-        <!-- The feature's name attribute should match what you specify as the JavaScript exec call's service -->
-        <feature name="StripeAlipay">
-            <param name="ios-package" value="CDVStripeAlipay" />
-        </feature>
+        <config-file target="config.xml" parent="/*">
+            <!-- The feature's name attribute should match what you specify as the JavaScript exec call's service -->
+            <feature name="StripeAlipay">
+                <param name="ios-package" value="CDVStripeAlipay" />
+            </feature>
+        </config-file>
         <header-file src="src/ios/CDVStripeAlipay.h" />
         <source-file src="src/ios/CDVStripeAlipay.m" />
         <!--<framework src="src/XXX/xx.framework" />-->
+        <!-- <podspec>
+            <pods use-frameworks="true">
+                <pod name="Stripe" />
+            </pods>
+        </podspec>
+        <framework src="Stripe" type="podspec" /> -->
     </platform>
 </plugin>

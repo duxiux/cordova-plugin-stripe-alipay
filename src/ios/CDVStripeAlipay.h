@@ -20,11 +20,12 @@
 #import <UIKit/UIKit.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface CDVDevice : CDVPlugin
+@interface CDVStripeAlipay : CDVPlugin
 {}
 
-+ (NSString*)cordovaVersion;
+- (void)coolMethod:(CDVInvokedUrlCommand*)command;
+- (void)alipayTest:(CDVInvokedUrlCommand*)command;
+- (void)alipayBySourceJson:(CDVInvokedUrlCommand*)command;
 
-- (void)getDeviceInfo:(CDVInvokedUrlCommand*)command;
 
 @end
