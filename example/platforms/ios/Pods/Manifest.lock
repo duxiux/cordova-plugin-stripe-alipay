@@ -5,12 +5,12 @@ DEPENDENCIES:
   - Stripe
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Stripe
 
 SPEC CHECKSUMS:
   Stripe: fa837c60f0644b488c994024ce7d9b001ea4e97c
 
-PODFILE CHECKSUM: d05edccd914eb41040768653ea03b198033c9380
+PODFILE CHECKSUM: 4ff82dd58eed9e472f43fbd6029a826e1919f50a
 
 COCOAPODS: 1.8.4
