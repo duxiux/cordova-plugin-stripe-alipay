@@ -10,7 +10,7 @@
   "cordova-plugin-stripe-alipay": {
     "source": {
       "type": "local",
-      "path": "/Users/real/Documents/plugins/stripeAlipay/example/node_modules/cordova-plugin-stripe-alipay"
+      "path": "/Users/real/Documents/develop/plugins/stripeAlipay/example/node_modules/cordova-plugin-stripe-alipay"
     },
     "is_top_level": true,
     "variables": {}

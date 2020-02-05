@@ -15,6 +15,7 @@
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		F7F69BA2AB5BB08C68522D76 /* Pods_HelloCordova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD06A82D4F9A990FC63A4C6 /* Pods_HelloCordova.framework */; };
+		FAA2D514274647F7970164BE /* CDVStripeAlipay.m in Sources */ = {isa = PBXBuildFile; fileRef = 665DC4FE76CA47CD930A4AD5 /* CDVStripeAlipay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		EBD06A82D4F9A990FC63A4C6 /* Pods_HelloCordova.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloCordova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
+		665DC4FE76CA47CD930A4AD5 /* CDVStripeAlipay.m */ = {isa = PBXFileReference; name = "CDVStripeAlipay.m"; path = "../../../../../src/ios/CDVStripeAlipay.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9D857C23D81843A79765AA3F /* CDVStripeAlipay.h */ = {isa = PBXFileReference; name = "CDVStripeAlipay.h"; path = "../../../../../src/ios/CDVStripeAlipay.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				665DC4FE76CA47CD930A4AD5 /* CDVStripeAlipay.m */,
+				9D857C23D81843A79765AA3F /* CDVStripeAlipay.h */,
 			);
 			name = Plugins;
 			path = HelloCordova/Plugins;
@@ -354,6 +359,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				FAA2D514274647F7970164BE /* CDVStripeAlipay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
