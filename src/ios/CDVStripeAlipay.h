@@ -18,10 +18,12 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <Cordova/CDVPlugin.h>
+#import "CDVPlugin.h"
 
 @interface CDVStripeAlipay : CDVPlugin
 {}
+
+- (void)pluginInitialize;
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command;
 - (void)alipayTest:(CDVInvokedUrlCommand*)command;
