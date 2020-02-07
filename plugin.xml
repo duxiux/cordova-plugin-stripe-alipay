@@ -30,7 +30,13 @@
         </config-file>
         <header-file src="src/ios/CDVStripeAlipay.h" />
         <source-file src="src/ios/CDVStripeAlipay.m" />
-        <!--<framework src="src/XXX/xx.framework" />-->
-        <!-- <podspec><pods use-frameworks="true"><pod name="Stripe" /></pods></podspec><framework src="Stripe" type="podspec" /> -->
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="Stripe" />
+            </pods>
+        </podspec>
     </platform>
 </plugin>

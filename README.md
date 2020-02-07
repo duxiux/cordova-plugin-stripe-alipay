@@ -4,6 +4,49 @@
 cordova plugin add cordova-plugin-stripe-alipay
 ```
 
+# 2.Alipay on iOS
+
+## 2.1.Mannual config: AppDelegate.MD
+Add code on `AppDelegate.m`
+```
+/**
+ This method is implemented to route returnURLs back to the Stripe SDK.
+ 
+ @see https://stripe.com/docs/mobile/ios/authentication#return-url
+ */
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    BOOL stripeHandled = [Stripe handleStripeURLCallbackWithURL:url];
+    if (stripeHandled) {
+        return YES;
+    } else {
+        // This was not a stripe url – do whatever url handling your app
+        // normally does, if any.
+    }
+    return NO;
+}
+```
+
+## 2.2 Mannual config: set key && scheme
+On `CDVStripeAlipay.m`，add your own key!
+```
+[Stripe setDefaultPublishableKey:@"pk_live_YOUR_OWN_KEY_XXXXXXX"];
+```
+
+Modify  scheme
+```
+#define DEFAULT_SCHEME       @"cuteapp://safepay/"
+```
+
+## 2.3 Mannual config: Add Scheme
+Project => Target => Info => URL Types => Click + => URL Schemes: cuteapp  
+URLSchemes should the same as 【DEFAULT_SCHEME】 prefix
+
+## 2.4 _config reference
+
+https://github.com/stripe/stripe-ios/blob/771f778fcbad58f771583ebe6fe499a2a4bc6ae8/Example/Non-Card%20Payment%20Examples/AlipayExampleViewController.swift  
+https://stripe.com/docs/sources/alipay/ios
+
+
 # 2.Test stripe alipay
 
 ## 2.1.Test alipay with default source
@@ -38,38 +81,6 @@ window.StripeAlipay.alipayBySourceJson(
 );
 ```
 
-# Alipay on iOS
-
-## 1.Mannual config
-Add code in `AppDelegate.m`
-```
-/**
- This method is implemented to route returnURLs back to the Stripe SDK.
- 
- @see https://stripe.com/docs/mobile/ios/authentication#return-url
- */
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    BOOL stripeHandled = [Stripe handleStripeURLCallbackWithURL:url];
-    if (stripeHandled) {
-        return YES;
-    } else {
-        // This was not a stripe url – do whatever url handling your app
-        // normally does, if any.
-    }
-    return NO;
-}
-```
-
-## 2.Mannual config
-On `CDVStripeAlipay.m`，add your own key!
-```
-[Stripe setDefaultPublishableKey:@"pk_live_YOUR_OWN_KEY_XXXXXXX"];
-```
-
-## 3.config reference
-
-https://github.com/stripe/stripe-ios/blob/771f778fcbad58f771583ebe6fe499a2a4bc6ae8/Example/Non-Card%20Payment%20Examples/AlipayExampleViewController.swift  
-https://stripe.com/docs/sources/alipay/ios
 
 # 3.QA
 

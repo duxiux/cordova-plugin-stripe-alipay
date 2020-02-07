@@ -26,12 +26,13 @@
 #include <sys/sysctl.h>
 #include "TargetConditionals.h"
 
-#import "CDV.h"
+#import <Cordova/CDV.h>
 #import "CDVStripeAlipay.h"
 #import "STPSourceParams.h"
 #import "STPAPIClient.h"
 #import "STPRedirectContext.h"
 
+#define DEFAULT_SCHEME       @"cuteapp://safepay/"
 
 @interface CDVStripeAlipay () {}
 @property (nonatomic, retain) STPRedirectContext* redirectContext;
@@ -66,7 +67,7 @@
     // Create a Source
     STPSourceParams *sourceParams = [STPSourceParams alipayParamsWithAmount:50
                                                                 currency:@"JPY"
-                                                                returnURL:@"myapp://safepay/"];
+                                                                returnURL:DEFAULT_SCHEME];
     [[STPAPIClient sharedClient] createSourceWithParams:sourceParams completion:^(STPSource *source, NSError *error) {
         if (error) {
             // Handle error
@@ -106,8 +107,8 @@
     
     // Create a Source
        STPSourceParams *sourceParams = [STPSourceParams alipayParamsWithAmount:amount
-                                                                   currency:currency
-                                                                   returnURL:@"myapp://safepay/"];
+                                                                        currency:currency
+                                                                   returnURL:DEFAULT_SCHEME];
        [[STPAPIClient sharedClient] createSourceWithParams:sourceParams completion:^(STPSource *source, NSError *error) {
            if (error) {
                // Handle error
