@@ -5,6 +5,15 @@ exports.coolMethod = function(arg0, success, error) {
 }
 
 /**
+ * Set default stripe key
+ e.g
+ window.StripeALipay.setDefaultKey('pk_live_YOUR_OWN_KEY')
+ */
+exports.setDefaultKey = function(stripeKey, success, error) {
+    exec(success, error, "StripeAlipay", "setDefaultKey", [stripeKey])
+}
+
+/**
  * Test alipay
  */
 exports.alipayTest = function(success, error) {

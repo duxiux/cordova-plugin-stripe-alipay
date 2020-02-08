@@ -26,6 +26,7 @@
 - (void)pluginInitialize;
 
 - (void)coolMethod:(CDVInvokedUrlCommand*)command;
+- (void)setDefaultKey:(CDVInvokedUrlCommand*)command;
 - (void)alipayTest:(CDVInvokedUrlCommand*)command;
 - (void)alipayBySourceJson:(CDVInvokedUrlCommand*)command;
 

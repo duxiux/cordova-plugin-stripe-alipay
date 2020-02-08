@@ -61,6 +61,22 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)setDefaultKey: (CDVInvokedUrlCommand *)command {
+    NSLog(@"setDefaultKey is called!");
+    
+    CDVPluginResult* pluginResult = nil;
+    NSString* key = [command.arguments objectAtIndex:0];
+
+    if (key != nil && [key length] > 0) {
+        [Stripe setDefaultPublishableKey:key];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:key];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
+
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 - (void)alipayTest: (CDVInvokedUrlCommand *)command {
     NSLog(@"alipayTest is called!");
     
